@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Advanced Search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="stylesheet.css">
+        <style>
+            #GoogleHeader {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 64px;
+            }
+            #TextAdvanced {
+                display: flex;
+                align-items: center;
+                height: 73px;
+                padding-left: 35px;
+                color: #d93025;
+                font-size: 20px;
+            }
+            #GreyLine {
+                width: 100%;
+                height: 0;
+                border-bottom: 1px solid #ebebeb;
+            }
+            #search {
+                display: flex;
+                flex-direction: column;
+                height: calc(100vh - 137px);
+                padding-left: 35px;
+                padding-top: 40px;
+            }
+            #TextFindPages {
+                background-color: #fff;
+                display: flex;
+                font-size: 16px;
+                text-align: left;
+            }
+            #FormASearch {
+                display: flex;
+                flex-direction: column;
+                padding-top: 0;
+                align-items: flex-start;
+                height: 100%;
+            }
+            img {
+                height: 24px;
+                width: 74px;
+                padding-left: 18px;
+            }
+            a {
+                margin-right: 18px;
+            }
+
+
+            #grids {
+                margin-top: 14px;
+                width: 100%;
+            }
+            .grid {
+                display: grid;
+                width: 100%;
+                grid-template-columns: 183px 572px;
+                column-gap: 5px;
+            }
+            .grid-item-text {
+                height: 43px;
+                font-size: 13px;
+                display: flex;
+                justify-content: left;
+                align-items: center; 
+            }
+            .grid-item-2ndColomn {
+                height: 43px;
+                width: 100%;
+                display: flex;
+                justify-content: left;
+                align-items: center; 
+            }
+            .grid-item-input {
+                width: 100%;
+                border-radius: 1px;
+                border: 1px solid #d9d9d9;
+                border-top: 1px solid #c0c0c0;
+                font-size: 13px;
+                height: 25px;
+                padding: 1px 8px;
+            }
+            .grid-item-input:focus {
+                box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
+                border: 1px solid #4d90fe;
+                outline: none;
+            }
+            #button {
+                width: 760px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+            #inputASearch {
+                width: 120px;
+                height: 30px;
+                padding: 0 12px;
+                margin: 10px 0;
+                box-shadow: none;
+                background-color: #4d90fe;
+                background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+                border: 1px solid #3079ed;
+                color: #fff;
+                border-radius: 2px;
+                cursor: default;
+                font-size: 11px;
+                font-weight: bold;
+                text-align: center;
+                white-space: nowrap;
+                outline: 0;
+            }
+            #inputASearch:hover {
+                background-color: #357ae8;
+                background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8);
+                border: 1px solid #2f5bb7;border-image: initial;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="GoogleHeader">
+            <img src="https://www.google.fr/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+            <a href="index.html">Search</a>
+        </div>
+        <div id="TextAdvanced">
+            Advanced Search
+        </div>
+        <div id="GreyLine">
+
+        </div>
+        <div id="search">
+            <form id="FormASearch" action="https://www.google.com/search">
+                <div id="TextFindPages">
+                    Find pages with...
+                </div>
+                <div id="grids">
+                    <div class="grid">
+                        <div class="grid-item-text">all these words:</div>
+                        <div class="grid-item-2ndColomn">
+                            <input class="grid-item-input" type="text" name="as_q">
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="grid-item-text">the exact word or phrase:</div>
+                        <div class="grid-item-2ndColomn">
+                            <input class="grid-item-input" type="text" name="as_epq">
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="grid-item-text">any of these words:</div>
+                        <div class="grid-item-2ndColomn">
+                            <input class="grid-item-input" type="text" name="as_oq">
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="grid-item-text">none of these words:</div>
+                        <div class="grid-item-2ndColomn">
+                            <input class="grid-item-input" type="text" name="as_eq">
+                        </div>
+                    </div>
+                </div>
+                <div id="button">
+                    <input id="inputASearch" type="submit" value="Advanced Search">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
